@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pokémon Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f7f7f7;
+    }
+
+    form {
+      margin-top: 50px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    div {
+      margin-top: 50px;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="getClassification(event)">
+    <input type="text" id="userInput" placeholder="Enter your text here">
+    <button type="submit">Submit</button>
+  </form>
+  <div>
+    <h2>Pokémon Name:</h2>
+    <p id="pokemonName">-</p>
+    <img src="" id="pokemonImage" width="150" height="150" alt="Pokémon Image">
+  
+    <h2>Pokémon Description:</h2>
+    <p id="pokemonDescription">-</p>
+  
+    <h2>Reasoning:</h2>
+    <p id="reasoning">-</p>
+  </div>
+  
+
+  <script>
+    async function getClassification(event) {
+      event.preventDefault();
+      const userInput = document.getElementById("userInput").value;
+
+      const response = await fetch("http://127.0.0.1:5000/get_pokemon_info", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text: userInput }),
+      });
+
+      const data = await response.json();
+
+      // Update the HTML elements with the response data
+        document.getElementById("pokemonName").innerText = data.pokemon_name;
+        document.getElementById("pokemonDescription").innerText = data.pokemon_description;
+        document.getElementById("reasoning").innerText = data.reasoning;
+        document.getElementById("pokemonImage").src = data.pokemon_image_url;   
+    }
+  </script>
+</body>
+</html>
