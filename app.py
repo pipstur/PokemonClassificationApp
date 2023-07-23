@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 CORS(app, resources={r"/get_pokemon_info": {"origins": "http://localhost:8000"}})
 
-openai.api_key = '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'
+openai.api_key = 'API_KEY'
 
 @app.route('/get_pokemon_info', methods=['POST'])
 def get_pokemon_info():
