@@ -1,3 +1,6 @@
+# Access !!!
+You can access the app through github pages, as long as there are FREE credits left unused
+
 # Pokemon Classification Web App 🚀
 Welcome to the Pokemon Classification Web App 🌟 - an interactive and fun experience that lets you discover which Pokemon you resemble based on the text you input! 🎉
 
@@ -33,3 +36,8 @@ This app is purely for entertainment purposes and is not affiliated with the off
 So, what are you waiting for? Let's dive into the whimsical world of Pokemon and discover your inner Pokemon spirit! 🎉💫
 
 Try out the Pokemon Classification Web App now and embark on a thrilling journey of self-discovery in the Pokemon universe! 🌟🐾
+
+# Usage
+Type any text into the text field such as this, and the results will pop up in around 20 seconds.
+![image](https://github.com/pipstur/PokemonClassificationApp/assets/95634547/f666b053-b035-4321-875c-3f3023d7f1a3)
+
