@@ -1,5 +1,5 @@
 # Access !!!
-You can access the app through github pages, as long as there are FREE credits left unused
+You can access the app through github pages
 
 # Pokemon Classification Web App 🚀
 Welcome to the Pokemon Classification Web App 🌟 - an interactive and fun experience that lets you discover which Pokemon you resemble based on the text you input! 🎉
