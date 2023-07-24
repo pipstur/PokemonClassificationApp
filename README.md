@@ -7,8 +7,6 @@ Welcome to the Pokemon Classification Web App 🌟 - an interactive and fun expe
 # 🌈 Key Features:
 Pokemon Identification: Type in any sentence or description, and our magical AI will analyze it to find the top three Pokemon species that closely match your input! 🧙‍♂️
 
-Engaging Conversations: Have a chat with our AI-powered Pokemon expert, who will respond in a friendly and witty tone, making you feel like you're talking to a real Pokemon professor! 🗣️
-
 Rich Pokemon Details: Once the analysis is complete, you'll be introduced to the names, descriptions, and reasoning behind the selected Pokemon choices. Get ready to immerse yourself in the enchanting Pokemon world! 🌏
 
 User-Friendly Interface: Our app's design is so intuitive and visually appealing that even Pikachu would give it a thumbs up! 👍
