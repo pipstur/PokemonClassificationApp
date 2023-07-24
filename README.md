@@ -1,5 +1,7 @@
 # Access !!!
-You can access the app through github pages
+There are some limitations, it will filter out sensitive topics.
+
+You can access the app through github pages on the following link: [Link to Github pages](https://pipstur.github.io/PokemonClassificationApp/)
 
 # Pokemon Classification Web App 🚀
 Welcome to the Pokemon Classification Web App 🌟 - an interactive and fun experience that lets you discover which Pokemon you resemble based on the text you input! 🎉
@@ -11,14 +13,14 @@ Rich Pokemon Details: Once the analysis is complete, you'll be introduced to the
 
 User-Friendly Interface: Our app's design is so intuitive and visually appealing that even Pikachu would give it a thumbs up! 👍
 
-Public Access: Share the excitement with your friends and family! Simply pass them the app's link, and they can embark on their Pokemon journey in no time! 💌
+Public Access: Share the excitement with your friends and family! Simply pass them the app's link, and they can embark on their Pokemon journey in no time! 💌 
 
 # 🎯 How It Works:
 Enter a sentence or a brief description. 📝
 
-Our AI uses its Pokemon magic to process your input. ✨
+The LLM uses its Pokemon magic to process your input. ✨
 
-Based on its analysis, the app reveals the top three Pokemon species that best match your input. 🎭
+Based on its analysis, the app reveals the Pokemon species that best matches your input. 🎭
 
 Get ready to learn all about the suggested Pokemon and their unique characteristics! 🤩
 
