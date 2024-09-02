@@ -38,6 +38,6 @@ So, what are you waiting for? Let's dive into the whimsical world of Pokemon and
 Try out the Pokemon Classification Web App now and embark on a thrilling journey of self-discovery in the Pokemon universe! 🌟🐾
 
 # Usage
-Type any text into the text field such as this, and the results will pop up in around 20 seconds.
+Type any text into the text field such as this, and the results will pop up soon.
 ![image](https://github.com/pipstur/PokemonClassificationApp/assets/95634547/f666b053-b035-4321-875c-3f3023d7f1a3)
 
