@@ -75,33 +75,40 @@
   
 
   <script>
-    async function getClassification(event) {
-      event.preventDefault();
-      const userInput = document.getElementById("userInput").value;
+  async function getClassification(event) {
+    event.preventDefault();
+    const userInput = document.getElementById("userInput").value;
 
-      // Create headers without the Access-Control headers
-      const headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      headers.append('Accept', 'application/json');
+    // Only include essential headers in the request
+    const headers = new Headers({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    });
 
+    try {
       const response = await fetch("https://pipstur.pythonanywhere.com/get_pokemon_info", {
-        method: "POST",
-        mode: "cors",
-        credentials: "include",  // Or 'same-origin' depending on your needs
+        method: "POST",  // Set the HTTP method to POST
+        mode: "cors",  // Ensure CORS mode is enabled
+        credentials: "include",  // Or 'same-origin' based on your needs
         headers: headers,
         body: JSON.stringify({ text: userInput }),
       });
 
-      try {
-        const data = await response.json();
-        document.getElementById("pokemonName").innerText = data.pokemon_name;
-        document.getElementById("pokemonDescription").innerText = data.pokemon_description;
-        document.getElementById("reasoning").innerText = data.reasoning;
-        document.getElementById("pokemonImage").src = data.pokemon_image_url;
-      } catch (error) {
-        console.error('There has been a problem with your fetch operation:', error);
+      // Check if the response is okay (status 200)
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
+
+      const data = await response.json();
+      document.getElementById("pokemonName").innerText = data.pokemon_name;
+      document.getElementById("pokemonDescription").innerText = data.pokemon_description;
+      document.getElementById("reasoning").innerText = data.reasoning;
+      document.getElementById("pokemonImage").src = data.pokemon_image_url;
+
+    } catch (error) {
+      console.error('There has been a problem with your fetch operation:', error);
     }
+  }
   </script>
 </body>
 </html>
