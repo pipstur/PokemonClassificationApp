@@ -87,7 +87,7 @@
       const response = await fetch("https://pipstur.pythonanywhere.com/get_pokemon_info", {
         method: "POST",
         mode: "cors",
-        credentials: "include",  // Or 'same-origin' depending on your needs
+        credentials: "same-origin",  // Or 'include' depending on your needs
         headers: headers,
         body: JSON.stringify({ text: userInput }),
       });
