@@ -37,7 +37,7 @@ def add_cors_headers(response):
 
 @app.route("/get_pokemon_info", methods=["POST", "OPTIONS"])
 def get_pokemon_info():
-    # Handle preflight request
+    # for damned preflight
     if request.method == "OPTIONS":
         response = jsonify({"message": "CORS preflight"})
         return add_cors_headers(response), 200
@@ -48,11 +48,10 @@ def get_pokemon_info():
             raise ValueError("Missing 'text' field in request")
 
         user_input = data["text"]
-        # Generate response from model
         chain = prompt | llm | StrOutputParser()
         response_text = chain.invoke({"input": user_input})
 
-        # Parse response
+        # for parsing the response
         name_start = "Name of the Pokémon:"
         description_start = "Description:"
         reasoning_start = "Reasoning:"
@@ -94,7 +93,6 @@ def get_pokemon_info():
         return add_cors_headers(response), 200
 
     except Exception as e:
-        # Log detailed error message
         print(f"Error: {str(e)}")
         response = jsonify({"error": str(e)})
         return add_cors_headers(response), 500
